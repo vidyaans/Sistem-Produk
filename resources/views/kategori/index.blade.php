@@ -102,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+</script>
 
 @if(session('success'))
 <script>

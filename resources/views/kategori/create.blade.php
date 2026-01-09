@@ -9,7 +9,7 @@
         <h3>Tambah Kategori</h3>
     </div>
 
-    <form action="{{ route('kategori.store') }}" method="POST" id="form-tambah-kategori">
+    <form action="{{ route('kategori.store') }}" method="POST">
         @csrf
 
         <div class="mb-3">
