@@ -9,7 +9,7 @@
         <h3>Tambah Kategori</h3>
     </div>
 
-    <form action="{{ route('kategori.store') }}" method="POST">
+    <form action="{{ route('kategori.store') }}" method="POST" id="form-tambah-kategori">
         @csrf
 
         <div class="mb-3">
@@ -32,3 +32,25 @@
 </div>
 
 @endsection
+
+@push('scripts')
+<script>
+    document.getElementById('form-tambah-kategori').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        Swal.fire({
+            title: 'Menyimpan kategori...',
+            text: 'Mohon tunggu sebentar',
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            didOpen: () => {
+                Swal.showLoading();
+            }
+        });
+
+        setTimeout(() => {
+            this.submit();
+        }, 500);
+    });
+</script>
+@endpush
