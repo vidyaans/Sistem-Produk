@@ -1,0 +1,218 @@
+/* ==============================
+   KATEGORI HEADER
+============================== */
+.kategori-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.kategori-header h3 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #000;
+    margin: 0;
+}
+
+/* ==============================
+   BUTTON TAMBAH KATEGORI
+============================== */
+.btn-tambah-kategori {
+    background: #da915eff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-tambah-kategori:hover {
+    background: #bd865fff;
+    color: white;
+}
+
+/* ==============================
+   DATATABLE KATEGORI CARD
+============================== */
+.dt-kategori-card {
+    background-color: #fffbebff;
+    border-radius: 12px;
+    padding: 25px 25px 20px 25px;
+    margin-top: 20px;
+    color: #000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Baris kontrol DataTables (length & search) */
+.dt-kategori-card .dataTables_wrapper .row:first-child {
+    margin-bottom: 20px;
+    align-items: center;
+    background-color: transparent;
+}
+
+.dt-kategori-card .dataTables_wrapper label {
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+/* Dropdown jumlah data */
+.dt-kategori-card .dataTables_wrapper .dataTables_length select {
+    background-color: #D3DBB1;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+    margin: 0 5px;
+    font-weight: 600;
+    appearance: auto;
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+}
+
+/* Input pencarian */
+.dt-kategori-card .dataTables_wrapper .dataTables_filter input {
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 3px 10px;
+    color: #000;
+    outline: none;
+    box-shadow: none;
+    margin-left: 5px;
+    width: 150px;
+}
+
+/* ==============================
+   TABEL KATEGORI
+============================== */
+.dt-kategori-card table.dataTable {
+    border-collapse: collapse;
+    margin-bottom: 0;
+    border: 1px solid #000;
+    width: 100%;
+    background-color: white;
+}
+
+/* Header tabel */
+.dt-kategori-card table.dataTable thead th {
+    background-color: #da915eff;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #000;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+/* Isi tabel */
+.dt-kategori-card table.dataTable tbody td {
+    background-color: white;
+    color: #000;
+    border: 1px solid #000;
+    padding: 10px;
+    vertical-align: middle;
+    font-weight: 500;
+}
+
+/* Hover baris tabel */
+.dt-kategori-card table.dataTable tbody tr:hover td {
+    background-color: #f8f9fa;
+}
+
+/* Warna ikon sorting */
+.dt-kategori-card table.dataTable thead th.sorting:after,
+.dt-kategori-card table.dataTable thead th.sorting_asc:after,
+.dt-kategori-card table.dataTable thead th.sorting_desc:after {
+    color: rgba(255,255,255,0.9);
+}
+
+/* Kolom aksi */
+.dt-kategori-card table.dataTable tbody td.aksi-column {
+    text-align: center;
+}
+
+/* ==============================
+   BUTTON AKSI
+============================== */
+.btn-edit-kategori {
+    background: #a3bd3a;
+    color: #000;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.btn-edit-kategori:hover {
+    background: rgb(166, 176, 126);
+    color: #000;
+}
+
+.btn-hapus-kategori {
+    background: #e91414;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 0 2px;
+}
+
+.btn-hapus-kategori:hover {
+    background: #CC0000;
+}
+
+/* ==============================
+   PAGINATION CUSTOM
+============================== */
+#footer-kategori-pagination {
+    background-color: transparent;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+/* Sembunyikan pagination default DataTables */
+.dt-kategori-card .dataTables_wrapper > .row:last-child {
+    display: none;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 768px) {
+    .kategori-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .btn-tambah-kategori {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .dt-kategori-card {
+        padding: 15px;
+    }
+    
+    #footer-kategori-pagination .d-flex {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}

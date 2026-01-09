@@ -1,0 +1,222 @@
+/* ================================
+   CARD UTAMA DETAIL PRODUK
+   ================================ */
+.detail-produk-card {
+    background: #fffbebff;                /* Warna latar kartu */
+    border-radius: 10px;                  /* Sudut membulat */
+    padding: 30px;                        /* Ruang dalam */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Efek bayangan */
+    width: 90%;                           /* Lebar relatif layar */
+    max-width: 1200px;                    /* Batas maksimum lebar */
+    margin: 20px auto;                    /* Posisi tengah */
+}
+
+/* ================================
+   HEADER DETAIL PRODUK
+   ================================ */
+.detail-produk-header {
+    border-radius: 6px 6px 0 0;           /* Rounded hanya bagian atas */
+    padding: 20px;
+    text-align: center;                   /* Teks di tengah */
+    margin: -30px -30px 20px -30px;       /* Menempel ke card utama */
+    border-bottom: none;
+}
+
+.detail-produk-header h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+}
+
+/* ================================
+   BOX GAMBAR PRODUK
+   ================================ */
+.detail-produk-image-box {
+    background: white;
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 25px;
+    width: 300px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.detail-produk-image-box img {
+    max-width: 230px;
+    max-height: 230px;
+    object-fit: contain;                  /* Gambar tidak terpotong */
+    border-radius: 6px;
+}
+
+/* ================================
+   INFORMASI UTAMA PRODUK
+   ================================ */
+.detail-produk-title {
+    font-size: 25px;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.detail-produk-kategori {
+    font-size: 16px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* ================================
+   DETAIL INFO (HARGA, STOK, DLL)
+   ================================ */
+.detail-produk-info p {
+    margin-bottom: 12px;
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.detail-produk-info strong {
+    font-weight: 700;
+}
+
+/* ================================
+   BADGE STOK
+   ================================ */
+.stok-badge {
+    background: #00FF00;                  /* Stok aman */
+    color: #000;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-weight: 700;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.stok-badge.low {
+    background: #FF0000;                  /* Stok rendah */
+    color: white;
+}
+
+/* ================================
+   DESKRIPSI PRODUK
+   ================================ */
+.detail-produk-deskripsi strong {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #000;
+}
+
+.detail-produk-deskripsi p {
+    color: #000;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ================================
+   INFORMASI TANGGAL (CREATED / UPDATED)
+   ================================ */
+.detail-produk-dates {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-top: 20px;
+    color: #da915eff;
+}
+
+.detail-produk-dates::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -30px;
+    right: -30px;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.63);       /* Garis pemisah */
+}
+
+/* ================================
+   AREA TOMBOL AKSI
+   ================================ */
+.detail-produk-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.detail-produk-left {
+    display: flex;
+}
+
+.detail-produk-right {
+    display: flex;
+    gap: 10px;
+}
+
+/* ================================
+   TOMBOL AKSI
+   ================================ */
+.btn-kembali,
+.btn-edit-custom,
+.btn-hapus-custom {
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+    text-decoration: none !important;
+}
+
+.btn-kembali {
+    background: #727264;
+    color: white;
+}
+
+.btn-kembali:hover {
+    background: #4b4c45;
+}
+
+.btn-edit-custom {
+    background: rgb(235, 122, 42);
+    color: #000;
+}
+
+.btn-edit-custom:hover {
+    background: rgb(201, 112, 48);
+}
+
+.btn-hapus-custom {
+    background: #e91414;
+    color: white;
+}
+
+.btn-hapus-custom:hover {
+    background: #CC0000;
+}
+
+/* ================================
+   RESPONSIVE MOBILE
+   ================================ */
+@media (max-width: 768px) {
+    .detail-produk-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .detail-produk-right {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .detail-produk-left {
+        width: 100%;
+        justify-content: center;
+    }
+}

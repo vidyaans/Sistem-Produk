@@ -1,0 +1,135 @@
+/* ================================
+   CARD TAMBAH KATEGORI
+   ================================ */
+.tambah-kategori-card {
+    background: #9ba377ff;          /* Warna latar card */
+    border-radius: 12px;            /* Sudut membulat */
+    padding: 35px;                 /* Ruang dalam card */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    max-width: 1200px; 
+    margin: 30px auto;             /* Tengah halaman */
+}
+
+/* ================================
+   HEADER FORM
+   ================================ */
+.tambah-kategori-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tambah-kategori-header h3 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #000;
+}
+
+/* ================================
+   LABEL FORM
+   ================================ */
+.tambah-kategori-card label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* ================================
+   INPUT & TEXTAREA
+   ================================ */
+.tambah-kategori-card input[type="text"],
+.tambah-kategori-card textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    font-size: 14px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+/* Placeholder input */
+.tambah-kategori-card input::placeholder,
+.tambah-kategori-card textarea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Efek fokus input */
+.tambah-kategori-card input:focus,
+.tambah-kategori-card textarea:focus {
+    outline: none;
+    border-color: #0033FF;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(0, 51, 255, 0.1);
+}
+
+/* Pengaturan textarea */
+.tambah-kategori-card textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* ================================
+   ACTION BUTTONS
+   ================================ */
+.tambah-kategori-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+/* Tombol kembali */
+.btn-kembali-kategori {
+    background: #727264;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-kembali-kategori:hover {
+    background: #4b4c45;
+    transform: translateY(-1px);
+}
+
+/* Tombol simpan */
+.btn-simpan-kategori {
+    background: rgb(235, 122, 42);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-simpan-kategori:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 33, 166, 0.3);
+}
+
+/* ================================
+   RESPONSIVE MOBILE
+   ================================ */
+@media (max-width: 768px) {
+    .tambah-kategori-card {
+        padding: 25px;
+        margin: 15px;
+        max-width: 100%;
+    }
+
+    .tambah-kategori-header h3 {
+        font-size: 22px;
+    }
+
+    .tambah-kategori-actions {
+        flex-direction: column;
+    }
+
+    .btn-kembali-kategori,
+    .btn-simpan-kategori {
+        width: 100%;
+        text-align: center;
+    }
+}

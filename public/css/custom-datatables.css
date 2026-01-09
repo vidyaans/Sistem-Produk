@@ -1,0 +1,179 @@
+/* ==============================
+   GLOBAL STYLE
+============================== */
+body {
+    background: #F4F6FF;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ==============================
+   ANIMATION KEYFRAMES
+============================== */
+/* Animasi muncul dari bawah */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Animasi muncul dari kiri */
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Animasi muncul dari kanan */
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Animasi pembesaran saat muncul */
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.85); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+/* Animasi denyut (highlight angka penting) */
+@keyframes pulse {
+    0%,100% { transform: scale(1); }
+    50%     { transform: scale(1.05); }
+}
+
+/* ==============================
+   WELCOME SECTION
+============================== */
+.welcome-section {
+    background: #fffbebff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp .6s ease-out;
+    box-shadow: 0 6px 20px rgba(188,192,92,.2);
+}
+
+.welcome-text h2 {
+    font-weight: 700;
+}
+
+.welcome-text p {
+    opacity: .9;
+}
+
+/* ==============================
+   SUMMARY / TOTAL BOX
+============================== */
+.total-boxes {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    animation: fadeInRight .8s ease-out;
+}
+
+.total-box {
+    background: #D3DBB1;
+    min-width: 150px;
+    padding: 1.3rem;
+    border-radius: 14px;
+    text-align: center;
+    animation: scaleIn .5s ease-out;
+    box-shadow: 0 4px 14px rgba(0,0,0,.12);
+}
+
+.total-title {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.total-number {
+    font-size: 32px;
+    font-weight: 800;
+    animation: pulse 2s infinite;
+}
+
+/* ==============================
+   DATATABLE CARD
+============================== */
+.dt-inner-card {
+    background: #fffbebff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 6px 24px rgba(0,0,0,.05);
+    animation: fadeInUp .8s ease-out;
+}
+
+.dt-inner-card h3 {
+    font-weight: 800;
+}
+
+.dt-inner-card small {
+    color: #f71f34;
+    font-weight: 600;
+}
+
+/* ==============================
+   DATATABLE STYLE
+============================== */
+/* Header tabel */
+table.dataTable thead th {
+    background: #da915eff;
+    color: white;
+    text-align: center;
+}
+
+/* Hover baris tabel */
+table.dataTable tbody tr:hover {
+    background: #EEF2FF;
+}
+
+/* Teks stok hampir habis */
+.text-lowstock {
+    color: #FF0909 !important;
+    font-weight: 700;
+    animation: pulse 1.5s infinite;
+}
+
+/* ==============================
+   DATATABLE PAGINATION
+============================== */
+.dataTables_wrapper .paginate_button { 
+    background: #fff !important; 
+    border-radius: 8px !important; 
+    padding: 7px 12px !important; 
+    font-weight: 600; 
+    color: #da915eff !important; 
+    transition: .25s; 
+    border: 1px solid #E2E7FF !important; 
+} 
+
+.dataTables_wrapper .paginate_button:hover { 
+    background: #d3d7c1 !important; 
+} 
+
+.dataTables_wrapper .paginate_button.current { 
+    background: #da915eff !important; 
+    color: #fff !important; 
+    border: none !important; 
+} 
+
+.dataTables_wrapper .dataTables_paginate {
+    margin-top: 15px;
+}
+
+.dataTables_wrapper .dataTables_filter { 
+    margin-bottom: 15px; 
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 768px) {
+    .total-boxes {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .total-box {
+        width: 100%;
+    }
+}

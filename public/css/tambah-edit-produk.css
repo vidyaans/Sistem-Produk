@@ -1,0 +1,172 @@
+/* ================================
+   CARD TAMBAH PRODUK
+   ================================ */
+.tambah-produk-card {
+    background: #9ba377ff;          /* Warna latar card */
+    border-radius: 10px;            /* Sudut membulat */
+    padding: 32px;                 /* Ruang dalam card */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    max-width: 1200px;
+    margin: 25px auto;             /* Posisi tengah */
+}
+
+/* ================================
+   HEADER FORM
+   ================================ */
+.tambah-produk-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.tambah-produk-header h3 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #000;
+}
+
+/* ================================
+   LABEL FORM
+   ================================ */
+.tambah-produk-card label {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* ================================
+   INPUT, SELECT & TEXTAREA
+   ================================ */
+.tambah-produk-card input[type="text"],
+.tambah-produk-card input[type="number"],
+.tambah-produk-card input[type="file"],
+.tambah-produk-card select,
+.tambah-produk-card textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.92);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* Spasi tambahan pada select */
+.tambah-produk-card select {
+    padding-right: 38px;
+}
+
+/* Efek fokus input */
+.tambah-produk-card input:focus,
+.tambah-produk-card select:focus,
+.tambah-produk-card textarea:focus {
+    outline: none;
+    border-color: #0033FF;
+    background: #fff;
+}
+
+/* Validasi error */
+.tambah-produk-card .form-control.is-invalid {
+    border-color: #dc3545;
+}
+
+/* Informasi format file / input */
+.format-info {
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+/* ================================
+   ACTION BUTTONS
+   ================================ */
+.tambah-produk-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    gap: 15px;
+}
+
+/* Tombol kembali */
+.btn-kembali-form {
+    padding: 10px 18px;
+    background-color: #727264;
+    color: #ffffff;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.btn-kembali-form:hover {
+    background-color: #4b4c45;
+}
+
+/* Tombol simpan */
+.btn-simpan-produk {
+    padding: 10px 20px;
+    background-color: rgb(235, 122, 42);
+    color: #fff;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.btn-simpan-produk:hover {
+    background-color: rgb(201, 112, 48);
+}
+
+/* ================================
+   ALERT ERROR
+   ================================ */
+.alert {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.alert-danger {
+    background: rgba(220, 53, 69, 0.1);
+    border: 1px solid #dc3545;
+    color: #721c24;
+}
+
+/* List error */
+.alert-danger ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.alert-danger li {
+    padding: 3px 0;
+}
+
+/* Pesan error input */
+.text-danger {
+    color: #e91414;
+    font-size: 13px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* ================================
+   RESPONSIVE MOBILE
+   ================================ */
+@media (max-width: 768px) {
+    .tambah-produk-card {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .tambah-produk-actions {
+        flex-direction: column;
+    }
+
+    .btn-kembali-form,
+    .btn-simpan-produk {
+        width: 100%;
+    }
+}

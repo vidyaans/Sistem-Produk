@@ -1,0 +1,367 @@
+/* ==============================
+   HEADER HALAMAN PRODUK
+============================== */
+.produk-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.produk-header h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+}
+
+/* ==============================
+   BUTTON TAMBAH PRODUK
+============================== */
+.btn-tambah-produk {
+    background: #da915eff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-tambah-produk:hover {
+    background: #bd865fff;
+    color: white;
+}
+
+/* ==============================
+   FILTER PRODUK
+============================== */
+.filter-produk-card {
+    background: #D3DBB1;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid filter */
+.filter-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto auto;
+    gap: 20px;
+    align-items: end;
+}
+
+.filter-item label {
+    color: #000;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Input dan select filter */
+.filter-item input,
+.filter-item select {
+    width: 100%;
+    padding: 8px 15px 8px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    font-size: 14px;
+    box-sizing: border-box;
+    appearance: auto;
+}
+
+.filter-item input::placeholder {
+    color: #999;
+}
+
+.filter-item input:focus,
+.filter-item select:focus {
+    outline: none;
+    border-color: rgb(200, 209, 162);
+    background: white;
+}
+
+/* Tombol filter */
+.filter-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.btn-terapkan {
+    background: #da915eff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.btn-terapkan:hover {
+    background: #bd865fff;
+}
+
+.btn-reset {
+    background: #727264;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.btn-reset:hover {
+    background: #4b4c45;
+    color: white;
+}
+
+/* ==============================
+   GRID PRODUK
+============================== */
+.produk-grid-container {
+    background: #D3DBB1;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Section per kategori */
+.kategori-section {
+    margin-bottom: 40px;
+}
+
+.kategori-section:last-child {
+    margin-bottom: 0;
+}
+
+.kategori-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+/* ==============================
+   CARD PRODUK
+============================== */
+.produk-card {
+    background: #e4ecc5;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.produk-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Gambar produk */
+.produk-card-image {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.produk-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 5px;
+}
+
+/* Isi card */
+.produk-card-body {
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+.produk-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 5px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.produk-card-kategori {
+    font-size: 13px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.produk-card-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+}
+
+.produk-card-deskripsi {
+    font-size: 13px;
+    color: #000;
+    line-height: 1.4;
+    margin-top: 8px;
+}
+
+/* ==============================
+   AKSI PRODUK
+============================== */
+.produk-card-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    border-top: 2px solid rgba(0, 0, 0, 0.74);
+    padding-top: 12px;
+    margin-top: 15px;
+}
+
+.btn-detail {
+    background: #a3bd3a;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-detail:hover {
+    background: rgb(166, 176, 126);
+}
+
+.btn-edit {
+    background: rgb(235, 122, 42);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-edit:hover {
+    background: rgb(201, 112, 48);
+}
+
+.btn-hapus {
+    background: #e91414;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-hapus:hover {
+    background: #CC0000;
+}
+
+/* ==============================
+   PAGINATION
+============================== */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.pagination-container .pagination {
+    display: flex;
+    gap: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination-container .page-link {
+    padding: 8px 12px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    color: #0021A6;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.pagination-container .page-link:hover,
+.pagination-container .page-item.active .page-link {
+    background: #0021A6;
+    color: white;
+    border-color: #0021A6;
+}
+
+.pagination-container .page-item.disabled .page-link {
+    background: #f5f5f5;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 768px) {
+    .produk-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .btn-tambah-produk {
+        width: 100%;
+        text-align: center;
+    }
+
+    .filter-produk-card,
+    .produk-grid-container {
+        padding: 15px;
+    }
+
+    .kategori-title {
+        font-size: 20px;
+    }
+
+    .produk-card-actions {
+        flex-direction: column;
+    }
+
+    .produk-card-actions a,
+    .produk-card-actions button {
+        width: 100%;
+    }
+}
