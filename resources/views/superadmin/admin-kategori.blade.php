@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Detail Kategori Admin | AISTOPHILE MANAGEMENT')
+
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/superadmin.css') }}">
 

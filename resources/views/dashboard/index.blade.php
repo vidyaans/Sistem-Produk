@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Dashboard Admin | AISTOPHILE MANAGEMENT')
+
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/custom-datatables.css') }}">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">

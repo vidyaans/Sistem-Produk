@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Tambah Kategori | AISTOPHILE MANAGEMENT')
+
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/tambah-edit-kategori.css') }}">
 

@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Daftar Kategori | AISTOPHILE MANAGEMENT')
+
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/daftar-kategori.css') }}">
 
