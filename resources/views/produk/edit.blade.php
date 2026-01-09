@@ -94,10 +94,13 @@
 
             @if($produk->gambar)
                 <img id="preview"
-                    src="{{ asset('storage/' . $produk->gambar) }}" 
+                    src="{{ asset('images/'.$produk->gambar) }}"
+                    onerror="this.src='{{ asset('images/no-image.png') }}'"
                     style="margin-top:10px; max-height:150px; border-radius:6px;">
             @else
-                <img id="preview" style="display:none; margin-top: 10px; max-height: 150px;">
+                <img id="preview"
+                    src="{{ asset('images/no-image.png') }}"
+                    style="margin-top:10px; max-height:150px; border-radius:6px;">
             @endif
         </div>
 

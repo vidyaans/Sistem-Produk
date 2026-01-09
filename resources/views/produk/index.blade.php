@@ -60,9 +60,14 @@
 
                                 <div class="produk-card-image">
                                     @if ($p->gambar)
-                                        <img src="{{ asset('storage/' . $p->gambar) }}" alt="{{ $p->nama_produk }}">
+                                        <img 
+                                            src="{{ asset('images/'.$p->gambar) }}" 
+                                            alt="{{ $p->nama_produk }}"
+                                            onerror="this.src='{{ asset('images/no-image.png') }}'">
                                     @else
-                                        <div style="padding: 40px; color: #666;">Gambar</div>
+                                        <img 
+                                            src="{{ asset('images/no-image.png') }}" 
+                                            alt="No Image">
                                     @endif
                                 </div>
 

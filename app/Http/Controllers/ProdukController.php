@@ -71,11 +71,15 @@ class ProdukController extends Controller
             'deskripsi' => 'nullable|string|max:1000', 
         ]);
 
-        // Simpan gambar produk jika ada
-        $path = null;
+        // =========================
+        // SIMPAN GAMBAR KE public/images
+        // (NOTE: akan hilang saat redeploy Railway)
+        // =========================
+        $filename = null;
         if ($request->hasFile('gambar')) {
-            $path = $request->file('gambar')
-                            ->store('produk_images', 'public');
+            $file = $request->file('gambar');
+            $filename = time().'_'.$file->getClientOriginalName();
+            $file->move(public_path('images'), $filename);
         }
 
         // Simpan data produk ke database
@@ -85,7 +89,7 @@ class ProdukController extends Controller
             'nama_produk' => $request->nama_produk,
             'harga' => $request->harga,
             'stok' => $request->stok,
-            'gambar' => $path,
+            'gambar' => $filename, // nama file gambar
             'deskripsi' => $request->deskripsi,
         ]);
 
@@ -133,14 +137,22 @@ class ProdukController extends Controller
             'deskripsi' => $request->deskripsi, 
         ];
 
-        // Update gambar jika ada upload baru
+        // =========================
+        // UPDATE GAMBAR JIKA ADA UPLOAD BARU
+        // =========================
         if ($request->hasFile('gambar')) {
-            if ($produk->gambar && Storage::disk('public')->exists($produk->gambar)) {
-                Storage::disk('public')->delete($produk->gambar);
+
+            // Hapus gambar lama jika ada
+            if ($produk->gambar && file_exists(public_path('images/'.$produk->gambar))) {
+                unlink(public_path('images/'.$produk->gambar));
             }
 
-            $data['gambar'] = $request->file('gambar')
-                                      ->store('produk_images', 'public');
+            // Simpan gambar baru
+            $file = $request->file('gambar');
+            $filename = time().'_'.$file->getClientOriginalName();
+            $file->move(public_path('images'), $filename);
+
+            $data['gambar'] = $filename;
         }
 
         // Update data produk
@@ -174,8 +186,8 @@ class ProdukController extends Controller
         }
 
         // Hapus file gambar jika ada
-        if ($produk->gambar && Storage::disk('public')->exists($produk->gambar)) {
-            Storage::disk('public')->delete($produk->gambar);
+        if ($produk->gambar && file_exists(public_path('images/'.$produk->gambar))) {
+            unlink(public_path('images/'.$produk->gambar));
         }
 
         // Hapus data produk

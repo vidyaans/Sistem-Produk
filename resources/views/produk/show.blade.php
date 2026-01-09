@@ -11,9 +11,14 @@
 
         <div class="detail-produk-image-box">
             @if ($produk->gambar)
-                <img src="{{ asset('storage/' . $produk->gambar) }}" alt="{{ $produk->nama_produk }}">
+                <img 
+                    src="{{ asset('images/'.$produk->gambar) }}" 
+                    alt="{{ $produk->nama_produk }}"
+                    onerror="this.src='{{ asset('images/no-image.png') }}'">
             @else
-                <img src="https://via.placeholder.com/400x250?text=No+Image" alt="No Image">
+                <img 
+                    src="{{ asset('images/no-image.png') }}" 
+                    alt="No Image">
             @endif
         </div>
 
