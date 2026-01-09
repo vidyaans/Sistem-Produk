@@ -90,9 +90,9 @@
 
 /* ============================================
    DATATABLE CONTROLS (Entries & Search)
-   ============================================ */
+============================================ */
 
-/* Container untuk kontrol datatable (show entries & search) */
+/* Container kontrol */
 .dt-controls {
     display: flex;
     justify-content: space-between;
@@ -100,23 +100,45 @@
     margin-bottom: 20px;
 }
 
+/* Label */
 .dt-controls label {
     color: #000;
     font-weight: 600;
-    margin-right: 10px;
+    margin-bottom: 0;
 }
 
-/* Styling untuk select dropdown dan input search */
-.dt-controls select,
-.dt-controls input {
-    padding: 6px 12px;
-    border-radius: 6px;
-    background: #D3DBB1 !important;
-    color: #000;
-}
-
+/* Dropdown & input */
 .dt-controls select {
-    margin-right: 10px;
+    background-color: #D3DBB1;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 5px;
+    appearance: auto;
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+}
+
+.dt-controls input {
+    background-color: #ffffff;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    outline: none;
+    box-shadow: none;
+    width: 150px;
+    margin-left: 5px;
+}
+
+/* Focus state biar konsisten */
+.dt-controls select:focus,
+.dt-controls input:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 /* ============================================

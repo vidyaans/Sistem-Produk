@@ -269,10 +269,12 @@
     font-size: 13px;
     cursor: pointer;
     transition: all 0.3s;
+    text-decoration: none;
 }
 
 .btn-edit:hover {
     background: rgb(201, 112, 48);
+    text-decoration: none;
 }
 
 .btn-hapus {
