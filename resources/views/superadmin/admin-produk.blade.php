@@ -105,6 +105,15 @@
 
 <script>
 $(document).ready(function() {
+    var hasData = $('#produkTable tbody tr td[colspan]').length === 0;
+
+    if (!hasData) {
+        $('#lengthSelect').prop('disabled', true);
+        $('#searchInput').prop('disabled', true);
+        $('#showingCount').text(0);
+        return;
+    }
+
     var table = $('#produkTable').DataTable({
         pageLength: 10,
         lengthChange: false,
@@ -112,10 +121,7 @@ $(document).ready(function() {
         searching: true,
         info: false,
         paginate: false,
-        dom: 't',
-        language: {
-            emptyTable: "Tidak ada data produk"
-        }
+        dom: 't'
     });
 
     $('#lengthSelect').on('change', function() {
