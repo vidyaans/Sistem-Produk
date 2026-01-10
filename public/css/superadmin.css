@@ -651,10 +651,12 @@
     border-radius: 6px;
     font-weight: 600;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .btn-reset-filter:hover {
     background: #5A6268;
+    text-decoration: none;
 }
 
 /* ============================================

@@ -50,7 +50,7 @@
             </tr>
             @empty
             <tr>
-                <td colspan="2" class="text-center">Tidak ada kategori</td>
+                <td colspan="2" class="text-center">Tidak ada data kategori</td>
             </tr>
             @endforelse
         </tbody>
@@ -74,6 +74,14 @@
 
 <script>
 $(document).ready(function() {
+    var hasData = $('#kategoriTable tbody tr td[colspan]').length === 0;
+
+    if (!hasData) {
+        $('#lengthSelect').prop('disabled', true);
+        $('#searchInput').prop('disabled', true);
+        return;
+    }
+
     var table = $('#kategoriTable').DataTable({
         pageLength: 10,
         lengthChange: false,
@@ -83,28 +91,28 @@ $(document).ready(function() {
         paginate: false,
         dom: 't',
         columnDefs: [
-            { orderable: false, targets: 0 } 
+            { orderable: false, targets: 0 }
         ]
     });
-    
+
     $('#lengthSelect').on('change', function() {
         table.page.len($(this).val()).draw();
         updateInfo();
     });
-    
+
     $('#searchInput').on('keyup', function() {
         table.search(this.value).draw();
         updateInfo();
         updateNumbers();
     });
-    
+
     function updateInfo() {
         var info = table.page.info();
         $('#showingCount').text(info.recordsDisplay);
     }
 
     function updateNumbers() {
-        table.rows({search: 'applied'}).every(function(rowIdx, tableLoop, rowLoop) {
+        table.rows({ search: 'applied' }).every(function(rowIdx, tableLoop, rowLoop) {
             this.cell(rowIdx, 0).data(rowLoop + 1);
         });
     }

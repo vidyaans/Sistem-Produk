@@ -105,36 +105,32 @@
 
 <script>
 $(document).ready(function() {
-    var hasData = $('#produkTable tbody tr').length > 0 && !$('#produkTable tbody tr td[colspan]').length;
-    
-    if (hasData) {
-        var table = $('#produkTable').DataTable({
-            pageLength: 10,
-            lengthChange: false,
-            ordering: true,
-            searching: true,
-            info: false,
-            paginate: false,
-            dom: 't'
-        });
-
-        $('#lengthSelect').on('change', function() {
-            table.page.len($(this).val()).draw();
-            updateInfo();
-        });
-
-        $('#searchInput').on('keyup', function() {
-            table.search(this.value).draw();
-            updateInfo();
-        });
-
-        function updateInfo() {
-            var info = table.page.info();
-            $('#showingCount').text(info.recordsDisplay);
+    var table = $('#produkTable').DataTable({
+        pageLength: 10,
+        lengthChange: false,
+        ordering: true,
+        searching: true,
+        info: false,
+        paginate: false,
+        dom: 't',
+        language: {
+            emptyTable: "Tidak ada data produk"
         }
-    } else {
-        $('#lengthSelect').prop('disabled', true);
-        $('#searchInput').prop('disabled', true);
+    });
+
+    $('#lengthSelect').on('change', function() {
+        table.page.len($(this).val()).draw();
+        updateInfo();
+    });
+
+    $('#searchInput').on('keyup', function() {
+        table.search(this.value).draw();
+        updateInfo();
+    });
+
+    function updateInfo() {
+        var info = table.page.info();
+        $('#showingCount').text(info.recordsDisplay);
     }
 });
 </script>
